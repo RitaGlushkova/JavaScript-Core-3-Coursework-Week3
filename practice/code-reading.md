@@ -15,7 +15,7 @@ Take a look at the following code:
 ```
 
 Explain why line 4 and line 6 output different numbers.
-
+Because variable x declared twice and the second time it is inside the function f1. So consoles will rely different hierarchy
 ## Question 2
 
 Take a look at the following code:
@@ -34,7 +34,10 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+20
+error
 
+Second console will not be able to access y variable as it is local to the function f1
 ## Question 3
 
 Take a look at the following code:
@@ -62,3 +65,7 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+9 
+Because x as a parameter in function f1 is a local variable to this function. Console won't see it.
+{x: 10}
+Objects are passed as references to functions, so when function is called it modifies the original object.

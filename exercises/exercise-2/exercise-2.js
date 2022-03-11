@@ -70,3 +70,23 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+const printNamesFromGriffindor = () => {
+  let copyOfArray = hogwarts;
+  copyOfArray
+    .filter((person) => person.house === "Gryffindor")
+    .forEach(({ firstName, lastName }) =>
+      console.log(`${firstName} ${lastName}`)
+    );
+};
+printNamesFromGriffindor();
+
+const printTeachersNames = () => {
+  let copyOfArr = hogwarts;
+  copyOfArr
+    .filter((person) => person.occupation === "Teacher" && person.pet !== null)
+    .forEach(({ firstName, lastName }) =>
+      console.log(`${firstName} ${lastName}`)
+    );
+};
+printTeachersNames();
